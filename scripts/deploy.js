@@ -1,8 +1,6 @@
-const { hexStripZeros } = require("ethers/lib/utils")
-
 const main = async () => {
   try {
-    const nftContractFactory = await hexStripZeros.ethers.getContractFactory("ChainBattles");
+    const nftContractFactory = await hre.ethers.getContractFactory("ChainBattles");
     const nftContract = await nftContractFactory.deploy();
     await nftContract.deployed();
 

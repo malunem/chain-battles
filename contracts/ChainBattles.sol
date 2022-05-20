@@ -16,7 +16,6 @@ contract ChainBattles is ERC721URIStorage {
   mapping(uint256 => uint256) public tokenIdToLevels;
 
   constructor() ERC721 ("Chain Battles", "CBTLS") {
-
   }
 
   function generateCharacter(uint256 tokenId) public returns(string memory) {
@@ -34,7 +33,7 @@ contract ChainBattles is ERC721URIStorage {
         "data:image/svg+xml;base64,",
         Base64.encode(svg)
       )
-    )
+    );
   }
 
   function getLevels(uint256 tokenId) public view returns(string memory) {
@@ -42,22 +41,21 @@ contract ChainBattles is ERC721URIStorage {
     return levels.toString();
   }
 
-  function getTokenURI(uint256 tokenId) public returns (string memory) {
+  function getTokenURI(uint256 tokenId) public returns (string memory){
     bytes memory dataURI = abi.encodePacked(
-      '{',
-        '"name": "Chain Battles #"', tokenId.toString(), '",',
-        '"description": "Battles on chain",',
-        '"image": "', generateCharacter(tokenId), '"',
-      '}'
+        '{',
+            '"name": "Chain Battles #', tokenId.toString(), '",',
+            '"description": "Battles on chain",',
+            '"image": "', generateCharacter(tokenId), '"',
+        '}'
     );
-
     return string(
-      abi.encodePacked(
-        "data:application/json;base64,",
-        Base64.encode(dataURI)
-      )
+        abi.encodePacked(
+            "data:application/json;base64,",
+            Base64.encode(dataURI)
+        )
     );
-  }
+}
 
   function mint() public {
     _tokenIds.increment();
