@@ -1,15 +1,8 @@
-# Basic Sample Hardhat Project
+# Chain Battles
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Contract deployed to: 0x1DC473c565f5B211E8BB5eB7Da847280ce4F0ECe
+Required Metamask on Polygon Mumbai network
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+Get free Matic for transactions: https://mumbaifaucet.com/
+Interact with smart contract (try to mint and train your nft warrior): https://mumbai.polygonscan.com/address/0x1DC473c565f5B211E8BB5eB7Da847280ce4F0ECe#writeContract 
+See dynamic NFTs: https://testnets.opensea.io/collection/chain-battles-nwfsmexfxw
